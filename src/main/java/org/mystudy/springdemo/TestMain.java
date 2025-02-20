@@ -34,7 +34,7 @@ public class TestMain {
         AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.genericBeanDefinition().getBeanDefinition();
         beanDefinition.setBeanClass(SpringBeanDefinition.class);
         beanFactory.registerBeanDefinition("springBeanDefinition", beanDefinition);
-
+        context.publishEvent("scx");
         System.out.println(beanFactory.getBean("springBeanDefinition"));
     }
 }
